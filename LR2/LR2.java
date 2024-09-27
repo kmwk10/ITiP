@@ -18,6 +18,10 @@ public class LR2 {
         System.out.println("#3 "+bike3.getDescription());
         System.out.println("\tColor: "+bike3.getColor());
         System.out.println("\tFrame material: "+bike3.getFrameMaterial());
+
+        ChildrenTricycle bike4 = new ChildrenTricycle();
+        System.out.println("#4 "+bike4.getDescription());
+        System.out.println("\tHas handle: "+bike4.getHasHandle());
         
         System.out.println("Number of bikes: "+Bike.getNumberOfBikes());
     }
