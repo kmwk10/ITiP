@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Task2 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("#1");
         System.out.println(duplicateChars("Barack", "Obama"));
         System.out.println("#2");
@@ -72,11 +72,11 @@ public class Task2 {
                 min = x;
             }
         }
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (arr[i]-min)/(max-min);
-        }
         if (min == max) {
             return new double[arr.length];
+        }
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (arr[i]-min)/(max-min);
         }
         return arr;
     }
