@@ -155,10 +155,8 @@ public class Task2 {
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
         for (char c : str1.toCharArray()) {
-            if (Character.isLetter(c)) {
-                if (str2.indexOf(c) == -1) {
-                    return false;
-                }
+            if (Character.isLetter(c) && str2.indexOf(c) == -1) {
+                return false;
             }
         }
         return true;
