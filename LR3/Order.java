@@ -10,24 +10,31 @@ public class Order {
         this.price = price;
         this.time = time;
     }
+
     public String[] getDishes () {
         return dishes;
     }
+
     public double getPrice () {
         return price;
     }
+
     public String getTime () {
         return time;
     }
+
     public void setDishes (String[] val) {
         dishes = val;
     }
+
     public void setPrice (double val) {
         price = val;
     }
+
     public void setTime (String val) {
         time = val;
     }
+    
     public String getInfo () {
         return "Dishes: " + Arrays.toString(dishes) + "\n" +
                 "Price: " + price + "\n" +
