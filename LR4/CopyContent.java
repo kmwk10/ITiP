@@ -11,15 +11,11 @@ public class CopyContent {
     }
 
     public static String getCopyContent(String inputFileName, String outputFileName) {
-        try {
-            FileReader reader = new FileReader(inputFileName);
-            FileWriter writer = new FileWriter(outputFileName); 
+        try (FileReader reader = new FileReader(inputFileName); FileWriter writer = new FileWriter(outputFileName)) {
             int i;
             while ((i = reader.read()) != -1) {
                 writer.write((char)i);
             }
-            reader.close();
-            writer.close();
             return("Successfully written");
         } catch (FileNotFoundException e1) {
             return(e1.getMessage());

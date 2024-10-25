@@ -27,10 +27,8 @@ public class NumberConverter {
     }
 
     public static void logException(String message) {
-        try {
-            FileWriter writer = new FileWriter("logFile.txt", true);
+        try (FileWriter writer = new FileWriter("logFile.txt", true)) {
             writer.write(message + "\n");
-            writer.close();
         } catch (IOException e) {
             System.out.println(e);
         }
